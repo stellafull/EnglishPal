@@ -435,21 +435,17 @@
             
           
           <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
+            <article class="md-content__inner md-typeset"><a class="md-content__button md-icon" download href="lab2.pdf" title="PDF Export"><svg style="height: 1.2rem; width: 1.2rem;" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm76.45 211.36l-96.42 95.7c-6.65 6.61-17.39 6.61-24.04 0l-96.42-95.7C73.42 337.29 80.54 320 94.82 320H160v-80c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v80h65.18c14.28 0 21.4 17.29 11.27 27.36zM377 105L279.1 7c-4.5-4.5-10.6-7-17-7H256v128h128v-6.1c0-6.3-2.5-12.4-7-16.9z"></path></svg></a>
               
                 
                 
                 <h1 id="lab2-the-orm-magic">LAB2 - The ORM Magic</h1>
 <p>Author: 占健豪, 王彦超, 陈致远, 汤佳伟</p>
-<p>Date: 2021/5/25</p>
+<p>Date: 2021/5/26</p>
 <p>Location: 22-206</p>
 <div STYLE="page-break-after: always;"></div>
 <h2 id="introduction">Introduction</h2>
-<p>In this lab, we are going to learn the object-relational mapper (ORM) provided by SQLAlchemy.</p>
-<p>With ORM, we can map a class to a database table, and map an object of that class to a row in</p>
-<p>the database table. With SQLAlchemy’s ORM, we can avoid directly using any raw SQL statements.</p>
-<p>More important,we will be able to follow the principle of dependency inversion – let ORM depend</p>
-<p>on the domain model,but not the other way around.</p>
+<p>In this lab, we are going to learn the object-relational mapper (ORM) provided by SQLAlchemy. With ORM, we can map a class to a database table, and map an object of that class to a row in the database table. With SQLAlchemy’s ORM, we can avoid directly using any raw SQL statements. More important, we will be able to follow the principle of dependency inversion – let ORM depend on the domain model, but not the other way around.</p>
 <p>We will create 3 files:</p>
 <blockquote>
 <ul>
@@ -458,8 +454,7 @@
 <li>app.py</li>
 </ul>
 </blockquote>
-<p>Here app.py imports the above two python modules and generates an SQLite database exactly</p>
-<p>like EnglishPalDatabase.db</p>
+<p>Here app.py imports the above two python modules and generates an SQLite database exactly like EnglishPalDatabase.db.</p>
 <h2 id="materials-and-methods">Materials and Methods</h2>
 <h3 id="work-flow">Work Flow</h3>
 <blockquote>
@@ -473,8 +468,7 @@
 </ol>
 </blockquote>
 <h3 id="source-codes">Source Codes</h3>
-<p>For this part, We implemented the incomplete function, class and used property to achieve the</p>
-<p>requirements. See the source codes and comments for detail.</p>
+<p>For this part, We implemented the incomplete function, class and used property to achieve the requirements. See the source codes and comments for detail.</p>
 <ol>
 <li>orm.py</li>
 </ol>
@@ -536,48 +530,48 @@
 <span class="n">metadata</span> <span class="o">=</span> <span class="n">MetaData</span><span class="p">()</span>
 
 <span class="n">articles</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span>
-    <span class="s1">&#39;articles&#39;</span><span class="p">,</span>
-    <span class="n">metadata</span><span class="p">,</span>
-    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;article_id&#39;</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">autoincrement</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
-    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;text&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">10000</span><span class="p">)),</span>
-    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;source&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">100</span><span class="p">)),</span>
-    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">10</span><span class="p">)),</span>
-    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;level&#39;</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
-    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;question&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">1000</span><span class="p">)),</span>
+    <span class="s1">&#39;articles&#39;</span><span class="p">,</span> 
+    <span class="n">metadata</span><span class="p">,</span> 
+    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;article_id&#39;</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">autoincrement</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> 
+    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;text&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">10000</span><span class="p">)),</span> 
+    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;source&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">100</span><span class="p">)),</span> 
+    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">10</span><span class="p">)),</span> 
+    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;level&#39;</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span> 
+    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;question&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">1000</span><span class="p">)),</span> 
 <span class="p">)</span>
 
 <span class="n">users</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span>
-    <span class="s1">&#39;users&#39;</span><span class="p">,</span>
-    <span class="n">metadata</span><span class="p">,</span>
-    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
-    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;password&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">64</span><span class="p">)),</span>
-    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;start_date&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
-    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;expiry_date&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
+    <span class="s1">&#39;users&#39;</span><span class="p">,</span> 
+    <span class="n">metadata</span><span class="p">,</span> 
+    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> 
+    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;password&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">64</span><span class="p">)),</span> 
+    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;start_date&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span> 
+    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;expiry_date&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span> 
 <span class="p">)</span>
 
 <span class="n">newwords</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span>
-    <span class="s1">&#39;newwords&#39;</span><span class="p">,</span>
-    <span class="n">metadata</span><span class="p">,</span>
-    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;word_id&#39;</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">autoincrement</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
-    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s1">&#39;users.username&#39;</span><span class="p">)),</span>
-    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;word&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">20</span><span class="p">)),</span>
-    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">10</span><span class="p">)),</span>
+    <span class="s1">&#39;newwords&#39;</span><span class="p">,</span> 
+    <span class="n">metadata</span><span class="p">,</span> 
+    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;word_id&#39;</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">autoincrement</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> 
+    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s1">&#39;users.username&#39;</span><span class="p">)),</span> 
+    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;word&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">20</span><span class="p">)),</span> 
+    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">10</span><span class="p">)),</span> 
 <span class="p">)</span>
 
 <span class="hll"><span class="c1"># ADDITION: add the reading part</span>
 </span><span class="hll"><span class="n">readings</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span>
-</span><span class="hll">    <span class="s1">&#39;readings&#39;</span><span class="p">,</span>
-</span><span class="hll">    <span class="n">metadata</span><span class="p">,</span>
-</span><span class="hll">    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">autoincrement</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
-</span><span class="hll">    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s1">&#39;users.username&#39;</span><span class="p">)),</span>
-</span><span class="hll">    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;article_id&#39;</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s1">&#39;articles.article_id&#39;</span><span class="p">)),</span>
+</span><span class="hll">    <span class="s1">&#39;readings&#39;</span><span class="p">,</span> 
+</span><span class="hll">    <span class="n">metadata</span><span class="p">,</span> 
+</span><span class="hll">    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">autoincrement</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> 
+</span><span class="hll">    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s1">&#39;users.username&#39;</span><span class="p">)),</span> 
+</span><span class="hll">    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;article_id&#39;</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s1">&#39;articles.article_id&#39;</span><span class="p">)),</span> 
 </span><span class="hll"><span class="p">)</span>
 </span><span class="k">def</span> <span class="nf">start_mappers</span><span class="p">():</span>
 <span class="hll">    <span class="c1"># ADDITION: implement the start_mapper()</span>
 </span><span class="hll">    <span class="n">lines_mapper</span> <span class="o">=</span> <span class="n">mapper</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">User</span><span class="p">,</span> <span class="n">users</span><span class="p">)</span>
 </span><span class="hll">    <span class="n">lines_mapper</span> <span class="o">=</span> <span class="n">mapper</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">NewWord</span><span class="p">,</span> <span class="n">newwords</span><span class="p">)</span>
 </span><span class="hll">    <span class="n">lines_mapper</span> <span class="o">=</span> <span class="n">mapper</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">Article</span><span class="p">,</span> <span class="n">articles</span><span class="p">)</span>
-</span><span class="hll">    <span class="n">lines_mapper</span> <span class="o">=</span> <span class="n">mapper</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">Reading</span><span class="p">,</span><span class="n">readings</span><span class="p">)</span>
+</span><span class="hll">    <span class="n">lines_mapper</span> <span class="o">=</span> <span class="n">mapper</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">Reading</span><span class="p">,</span> <span class="n">readings</span><span class="p">)</span>
 </span><span class="hll">    <span class="c1"># pass</span>
 </span></code></pre></div>
 </td></tr></table>
@@ -819,9 +813,9 @@
 <span class="c1"># add a few articles</span>
 
 <span class="n">session</span> <span class="o">=</span> <span class="n">get_session</span><span class="p">()</span>
-<span class="n">article</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">Article</span><span class="p">(</span><span class="n">article_id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-                        <span class="n">text</span><span class="o">=</span><span class="s1">&#39;THE ORIGIN OF SPECIES BY MEANS OF NATURAL SELECTION, OR THE PRESERVATION OF FAVOURED RACES IN THE STRUGGLE FOR LIFE&#39;</span><span class="p">,</span>
-                        <span class="n">source</span><span class="o">=</span><span class="s1">&#39;CHARLES DARWIN, M.A.&#39;</span><span class="p">,</span> <span class="n">date</span><span class="o">=</span><span class="s1">&#39;1859-01-01&#39;</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+<span class="n">article</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">Article</span><span class="p">(</span><span class="n">article_id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> 
+                        <span class="n">text</span><span class="o">=</span><span class="s1">&#39;THE ORIGIN OF SPECIES BY MEANS OF NATURAL SELECTION, OR THE PRESERVATION OF FAVOURED RACES IN THE STRUGGLE FOR LIFE&#39;</span><span class="p">,</span> 
+                        <span class="n">source</span><span class="o">=</span><span class="s1">&#39;CHARLES DARWIN, M.A.&#39;</span><span class="p">,</span> <span class="n">date</span><span class="o">=</span><span class="s1">&#39;1859-01-01&#39;</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> 
                         <span class="n">question</span><span class="o">=</span><span class="s1">&#39;Are humans descended from monkeys?&#39;</span><span class="p">)</span>
 <span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">article</span><span class="p">)</span>
 <span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
