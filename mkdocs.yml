@@ -1,12 +1,35 @@
+# project information
 site_name: EnglishPal
+site_author: Yanchao Wang, Jianhao Zhan, Jiawei Tang, Zhiyuan Chen
+
+# Repository
+repo_name: EnglishPal/lab_docs_mkdocs
+repo_url: https://github.com/stellafull/EnglishPal
+edit_uri: ""
+
+# copyright
+copyright: 'Copyright &copy; 2021 Yanchao Wang, Jianhao Zhan, Jiawei Tang, Zhiyuan Chen'
+
 nav: 
     - Home: index.md
     - Lab1: lab1.md
     - Lab2: lab2.md
-theme: material
-
+theme: 
+   name: material
+   palette:
+      primary: amber
+      accent: amber
 plugins:
     - search
-    - mermaid2
+markdown_extensions:
+    - codehilite:
+        linenums: true
+    - pymdownx.superfences:
+        # make exceptions to highlighting of code:
+        custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:mermaid2.fence_mermaid
 extra_javascript:
     - https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
+
