@@ -435,7 +435,7 @@
             
           
           <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
+            <article class="md-content__inner md-typeset"><a class="md-content__button md-icon" download href="lab2.pdf" title="PDF Export"><svg style="height: 1.2rem; width: 1.2rem;" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm76.45 211.36l-96.42 95.7c-6.65 6.61-17.39 6.61-24.04 0l-96.42-95.7C73.42 337.29 80.54 320 94.82 320H160v-80c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v80h65.18c14.28 0 21.4 17.29 11.27 27.36zM377 105L279.1 7c-4.5-4.5-10.6-7-17-7H256v128h128v-6.1c0-6.3-2.5-12.4-7-16.9z"></path></svg></a>
               
                 
                 
@@ -443,6 +443,7 @@
 <p>Author: 占健豪, 王彦超, 陈致远, 汤佳伟</p>
 <p>Date: 2021/5/25</p>
 <p>Location: 22-206</p>
+<div STYLE="page-break-after: always;"></div>
 <h2 id="introduction">Introduction</h2>
 <p>In this lab, we are going to learn the object-relational mapper (ORM) provided by SQLAlchemy.</p>
 <p>With ORM, we can map a class to a database table, and map an object of that class to a row in</p>
@@ -527,13 +528,7 @@
 48
 49
 50
-51
-52
-53
-54</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># Software Architecture and Design Patterns -- Lab 2 starter code</span>
-<span class="c1"># Copyright (C) 2021 Hui Lan</span>
-
-<span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">Table</span><span class="p">,</span> <span class="n">MetaData</span><span class="p">,</span> <span class="n">Column</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">String</span><span class="p">,</span> <span class="n">Date</span><span class="p">,</span> <span class="n">ForeignKey</span>
+51</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">Table</span><span class="p">,</span> <span class="n">MetaData</span><span class="p">,</span> <span class="n">Column</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">String</span><span class="p">,</span> <span class="n">Date</span><span class="p">,</span> <span class="n">ForeignKey</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="kn">import</span> <span class="n">mapper</span><span class="p">,</span> <span class="n">relationship</span>
 
 <span class="kn">import</span> <span class="nn">model</span>
@@ -586,8 +581,7 @@
 </span><span class="hll">    <span class="c1"># pass</span>
 </span></code></pre></div>
 </td></tr></table>
-<img alt="" src="" />
-2. model.py</p>
+2.    model.py</p>
 <p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -646,13 +640,7 @@
 56
 57
 58
-59
-60
-61
-62</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># Software Architecture and Design Patterns -- Lab 2 starter code</span>
-<span class="c1"># Copyright (C) 2021 Hui Lan</span>
-
-<span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span>
+59</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span>
 <span class="hll"><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span>
 </span><span class="hll"><span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="kn">import</span> <span class="n">sessionmaker</span>
 </span>
@@ -713,8 +701,7 @@
 </span><span class="hll">        <span class="bp">self</span><span class="o">.</span><span class="n">article_id</span> <span class="o">=</span> <span class="n">article_id</span>
 </span></code></pre></div>
 </td></tr></table>
-<img alt="" src="" />
-3. app.py</p>
+3.    app.py</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -787,13 +774,7 @@
 70
 71
 72
-73
-74
-75
-76</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># Software Architecture and Design Patterns -- Lab 2 starter code</span>
-<span class="c1"># Copyright (C) 2021 Hui Lan</span>
-
-<span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span>
+73</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="kn">import</span> <span class="n">sessionmaker</span>
 
 <span class="kn">import</span> <span class="nn">model</span>
@@ -871,35 +852,23 @@
 <h2 id="results">Results</h2>
 <p>For this part we make <strong>screenshots</strong> to illustrate the results.</p>
 <ol>
-<li>
-<p>After running <strong>app.py</strong>:<img alt="./imgs/apppy_res.png" src="https://github.com/Wangyc2000/SADP_Lab2_Report/raw/master/source/imgs/apppy_res.png" /></p>
-</li>
-<li>
-<p>Inside <strong>EnglishPalDatabase.db(Open with Navicat Premium)</strong>: </p>
+<li>After running <strong>app.py</strong>:<img alt="./imgs/apppy_res.png" src="https://github.com/Wangyc2000/SADP_Lab2_Report/raw/master/source/imgs/apppy_res.png" /></li>
+<li>Inside <strong>EnglishPalDatabase.db(Open with Navicat Premium)</strong>: <blockquote>
+<ul>
+<li>list of tables: 
+  <img alt="imgs/db_tables.png" src="https://github.com/Wangyc2000/SADP_Lab2_Report/raw/master/source/imgs/db_tables.png" /></li>
+<li>articles: 
+  <img alt="./imgs/db_articles.png" src="https://github.com/Wangyc2000/SADP_Lab2_Report/raw/master/source/imgs/db_articles.png" /></li>
+<li>newwords: 
+  <img alt="./imgs/db_newwords.png" src="https://github.com/Wangyc2000/SADP_Lab2_Report/raw/master/source/imgs/db_newwords.png" /></li>
+<li>readings: 
+  <img alt="./imgs/db_readings.png" src="https://github.com/Wangyc2000/SADP_Lab2_Report/raw/master/source/imgs/db_readings.png" /></li>
+<li>users: 
+  <img alt="./imgs/db_users.png" src="https://github.com/Wangyc2000/SADP_Lab2_Report/raw/master/source/imgs/db_users.png" /></li>
+</ul>
+</blockquote>
 </li>
 </ol>
-<blockquote>
-<ul>
-<li>list of tables: </li>
-</ul>
-<p><img alt="imgs/db_tables.png" src="https://github.com/Wangyc2000/SADP_Lab2_Report/raw/master/source/imgs/db_tables.png" /></p>
-<ul>
-<li>articles: </li>
-</ul>
-<p><img alt="./imgs/db_articles.png" src="https://github.com/Wangyc2000/SADP_Lab2_Report/raw/master/source/imgs/db_articles.png" /></p>
-<ul>
-<li>newwords: </li>
-</ul>
-<p><img alt="./imgs/db_newwords.png" src="https://github.com/Wangyc2000/SADP_Lab2_Report/raw/master/source/imgs/db_newwords.png" /></p>
-<ul>
-<li>readings: </li>
-</ul>
-<p><img alt="./imgs/db_readings.png" src="https://github.com/Wangyc2000/SADP_Lab2_Report/raw/master/source/imgs/db_readings.png" /></p>
-<ul>
-<li>users: </li>
-</ul>
-<p><img alt="./imgs/db_users.png" src="https://github.com/Wangyc2000/SADP_Lab2_Report/raw/master/source/imgs/db_users.png" /></p>
-</blockquote>
 <h2 id="discussions">Discussions</h2>
 <ul>
 <li>For this lab we learnt about the way to manipulate database with SQLAlchemy’s ORM (object-relational mapper) instead of raw SQL statement in web application, which will bring convenience while making the architecture more clear.</li>
