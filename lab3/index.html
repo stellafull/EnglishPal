@@ -552,40 +552,45 @@
 
 
 <span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="n">user_repo</span><span class="p">,</span> <span class="n">article_repo</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
-
-    <span class="n">dbuser</span> <span class="o">=</span> <span class="n">user_repo</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">username</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">dbuser</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">dbuser</span><span class="o">.</span><span class="n">password</span> <span class="o">!=</span> <span class="n">user</span><span class="o">.</span><span class="n">password</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="n">UnknownUser</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
-
-    <span class="n">wordList</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">NewWord</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">NewWord</span><span class="o">.</span><span class="n">username</span> <span class="o">==</span> <span class="n">user</span><span class="o">.</span><span class="n">username</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
-    <span class="n">difficulty_list</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">wordList</span><span class="p">:</span>
-        <span class="n">difficulty_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">WORD_DIFFICULTY_LEVEL</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">word</span><span class="p">))</span>
-    <span class="n">difficulty_list</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    <span class="n">lu</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">difficulty_list</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">count</span><span class="o">&gt;=</span><span class="mi">3</span><span class="p">:</span>
-            <span class="k">break</span>
-        <span class="n">lu</span> <span class="o">+=</span> <span class="n">i</span>
-        <span class="n">count</span><span class="o">+=</span><span class="mi">1</span>
-    <span class="n">lu</span> <span class="o">/=</span> <span class="n">count</span>
-
-    <span class="n">qualified_articles</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">Article</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">Article</span><span class="o">.</span><span class="n">level</span> <span class="o">&gt;</span> <span class="n">lu</span><span class="p">)</span><span class="o">.</span><span class="n">order_by</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">Article</span><span class="o">.</span><span class="n">level</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">qualified_articles</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="n">NoArticleMatched</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">wanted_article</span> <span class="o">=</span> <span class="n">qualified_articles</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-        <span class="n">ar</span> <span class="o">=</span> <span class="n">article_repo</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">wanted_article</span><span class="o">.</span><span class="n">article_id</span><span class="p">)</span>
-        <span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">ar</span><span class="p">)</span>
-        <span class="n">dbuser</span><span class="o">.</span><span class="n">read_article</span><span class="p">(</span><span class="n">ar</span><span class="p">)</span>
-        <span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">wanted_article</span><span class="o">.</span><span class="n">article_id</span>
-</code></pre></div>
+<span class="hll">
+</span><span class="hll">    <span class="n">dbuser</span> <span class="o">=</span> <span class="n">user_repo</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">username</span><span class="p">)</span>
+</span><span class="hll">    <span class="k">if</span> <span class="n">dbuser</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">dbuser</span><span class="o">.</span><span class="n">password</span> <span class="o">!=</span> <span class="n">user</span><span class="o">.</span><span class="n">password</span><span class="p">:</span>
+</span><span class="hll">        <span class="k">raise</span> <span class="n">UnknownUser</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+</span><span class="hll">
+</span><span class="hll">    <span class="n">wordList</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">NewWord</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">NewWord</span><span class="o">.</span><span class="n">username</span> <span class="o">==</span> <span class="n">user</span><span class="o">.</span><span class="n">username</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</span><span class="hll">    <span class="n">difficulty_list</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span class="hll">    <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">wordList</span><span class="p">:</span>
+</span><span class="hll">        <span class="n">difficulty_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">WORD_DIFFICULTY_LEVEL</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">word</span><span class="p">))</span>
+</span><span class="hll">    <span class="n">difficulty_list</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span class="hll">    <span class="n">lu</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span class="hll">    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span class="hll">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">difficulty_list</span><span class="p">:</span>
+</span><span class="hll">        <span class="k">if</span> <span class="n">count</span><span class="o">&gt;=</span><span class="mi">3</span><span class="p">:</span>
+</span><span class="hll">            <span class="k">break</span>
+</span><span class="hll">        <span class="n">lu</span> <span class="o">+=</span> <span class="n">i</span>
+</span><span class="hll">        <span class="n">count</span><span class="o">+=</span><span class="mi">1</span>
+</span><span class="hll">    <span class="n">lu</span> <span class="o">/=</span> <span class="n">count</span>
+</span><span class="hll">
+</span><span class="hll">    <span class="n">qualified_articles</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">Article</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">Article</span><span class="o">.</span><span class="n">level</span> <span class="o">&gt;</span> <span class="n">lu</span><span class="p">)</span><span class="o">.</span><span class="n">order_by</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">Article</span><span class="o">.</span><span class="n">level</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</span><span class="hll">    <span class="k">if</span> <span class="ow">not</span> <span class="n">qualified_articles</span><span class="p">:</span>
+</span><span class="hll">        <span class="k">raise</span> <span class="n">NoArticleMatched</span>
+</span><span class="hll">    <span class="k">else</span><span class="p">:</span>
+</span><span class="hll">        <span class="n">wanted_article</span> <span class="o">=</span> <span class="n">qualified_articles</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span><span class="hll">        <span class="n">ar</span> <span class="o">=</span> <span class="n">article_repo</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">wanted_article</span><span class="o">.</span><span class="n">article_id</span><span class="p">)</span>
+</span><span class="hll">        <span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">ar</span><span class="p">)</span>
+</span><span class="hll">        <span class="n">dbuser</span><span class="o">.</span><span class="n">read_article</span><span class="p">(</span><span class="n">ar</span><span class="p">)</span>
+</span><span class="hll">        <span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</span><span class="hll">        <span class="k">return</span> <span class="n">wanted_article</span><span class="o">.</span><span class="n">article_id</span>
+</span></code></pre></div>
 </td></tr></table>
 <h2 id="results">Results</h2>
 <p><img alt="lab3_result" src="../img/lab3_result.png" /></p>
 <h2 id="discussions">Discussions</h2>
+<ul>
+<li>For this lab we learnt about the service layer, and how it work with databases and user interfaces.</li>
+<li>We tried to understand dependency inversion.</li>
+<li>Also, we learnt to use github page combining with mkdocs to manage our lab report and deploy it to webpages.</li>
+</ul>
 <h2 id="references">References</h2>
 <p><a href="http://lanlab.org/course/2021s/softarch/lab3/Lab3.pdf">lab3.pdf</a></p>
                 
