@@ -532,10 +532,7 @@
 <span class="normal">43</span>
 <span class="normal">44</span>
 <span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># Software Architecture and Design Patterns -- Lab 3 starter code</span>
+<span class="normal">46</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># Software Architecture and Design Patterns -- Lab 3 starter code</span>
 <span class="c1"># An implementation of the Service Layer</span>
 <span class="c1"># Copyright (C) 2021 Hui Lan</span>
 
@@ -545,14 +542,11 @@
 <span class="c1"># word and its difficulty level</span>
 <span class="n">WORD_DIFFICULTY_LEVEL</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;starbucks&#39;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;luckin&#39;</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;secondcup&#39;</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;costa&#39;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;timhortons&#39;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;frappuccino&#39;</span><span class="p">:</span><span class="mi">6</span><span class="p">}</span>
 
-
 <span class="k">class</span> <span class="nc">UnknownUser</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
     <span class="k">pass</span>
 
-
 <span class="k">class</span> <span class="nc">NoArticleMatched</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
     <span class="k">pass</span>
-
 
 <span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="n">user_repo</span><span class="p">,</span> <span class="n">article_repo</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
 <span class="hll">
