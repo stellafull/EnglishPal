@@ -1,4 +1,4 @@
-# Software Architecture and Design Patterns -- Lab 2 starter code
+# Software Architecture and Design Patterns -- Lab 3 starter code
 # Copyright (C) 2021 Hui Lan
 
 from sqlalchemy import Table, MetaData, Column, Integer, String, Date, ForeignKey
@@ -17,7 +17,8 @@ articles = Table(
     Column('date', String(10)),
     Column('level', Integer, nullable=False),
     Column('question', String(1000)),
-)
+    )
+
 
 users = Table(
     'users',
@@ -26,7 +27,7 @@ users = Table(
     Column('password', String(64)),
     Column('start_date', String(10), nullable=False),
     Column('expiry_date', String(10), nullable=False),
-)
+    )
 
 newwords = Table(
     'newwords',
@@ -35,21 +36,19 @@ newwords = Table(
     Column('username', String(100), ForeignKey('users.username')),
     Column('word', String(20)),
     Column('date', String(10)),
-)
+    )
 
-# ADDITION: add the reading part
 readings = Table(
     'readings',
     metadata,
     Column('id', Integer, primary_key=True, autoincrement=True),
     Column('username', String(100), ForeignKey('users.username')),
     Column('article_id', Integer, ForeignKey('articles.article_id')),
-)
-def start_mappers():
-    # ADDITION: implement the start_mapper()
-    lines_mapper = mapper(model.User, users)
-    lines_mapper = mapper(model.NewWord, newwords)
-    lines_mapper = mapper(model.Article, articles)
-    lines_mapper = mapper(model.Reading,readings)
-    # pass
+    )
 
+
+def start_mappers():
+    mapper(model.Article, articles)
+    mapper(model.NewWord, newwords)
+    mapper(model.User, users, properties={'newwords':relationship(model.NewWord),
+                                          '_read':relationship(model.Article, secondary=readings)})

@@ -14,13 +14,25 @@ nav:
     - Home: index.md
     - Lab1: lab1.md
     - Lab2: lab2.md
+    - Lab3: lab3.md
 theme: 
    name: material
+   favicon: img/favicon.ico
+   logo: img/favicon.ico
    palette:
-      primary: amber
-      accent: amber
+    - scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
 plugins:
     - search
+    - pdf-export:
+        verbose: false
+        media_type: print
 markdown_extensions:
     - codehilite:
         linenums: true
@@ -32,4 +44,5 @@ markdown_extensions:
             format: !!python/name:mermaid2.fence_mermaid
 extra_javascript:
     - https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
+
 

@@ -1,4 +1,4 @@
-# EnglishPal Dependency Analysis and Dependency Graph
+# LAB1 - EnglishPal Dependency Analysis and Dependency Graph
 
 Author: 占健豪, 王彦超, 陈致远, 汤佳伟
 

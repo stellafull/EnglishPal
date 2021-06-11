@@ -11,8 +11,8 @@
         <meta name="author" content="Yanchao Wang, Jianhao Zhan, Jiawei Tang, Zhiyuan Chen">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.5">
+      <link rel="icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.6">
     
     
       
@@ -20,14 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.bde7dde4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.875de78c.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
-        
-          
-          
-          <meta name="theme-color" content="#ffc105">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
         
       
     
@@ -51,13 +47,17 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="amber" data-md-color-accent="amber">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
     
     <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#the-orm-magic" class="md-skip">
+        <a href="#lab2-the-orm-magic" class="md-skip">
           Skip to content
         </a>
       
@@ -78,8 +78,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="EnglishPal" class="md-header__button md-logo" aria-label="EnglishPal" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <img src="../img/favicon.ico" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -101,6 +100,28 @@
         </div>
       </div>
     </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="" type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent="" type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31z"/></svg>
+            </label>
+          
+        
+      </form>
     
     
     
@@ -171,8 +192,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="EnglishPal" class="md-nav__button md-logo" aria-label="EnglishPal" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <img src="../img/favicon.ico" alt="logo">
 
     </a>
     EnglishPal
@@ -326,6 +346,21 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab3/" class="md-nav__link">
+        Lab3
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -415,20 +450,17 @@
             
           
           <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
+            <article class="md-content__inner md-typeset"><a class="md-content__button md-icon" download href="lab2.pdf" title="PDF Export"><svg style="height: 1.2rem; width: 1.2rem;" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm76.45 211.36l-96.42 95.7c-6.65 6.61-17.39 6.61-24.04 0l-96.42-95.7C73.42 337.29 80.54 320 94.82 320H160v-80c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v80h65.18c14.28 0 21.4 17.29 11.27 27.36zM377 105L279.1 7c-4.5-4.5-10.6-7-17-7H256v128h128v-6.1c0-6.3-2.5-12.4-7-16.9z"></path></svg></a>
               
                 
                 
-                <h1 id="the-orm-magic">The ORM Magic</h1>
+                <h1 id="lab2-the-orm-magic">LAB2 - The ORM Magic</h1>
 <p>Author: 占健豪, 王彦超, 陈致远, 汤佳伟</p>
-<p>Date: 2021/5/25</p>
+<p>Date: 2021/5/26</p>
 <p>Location: 22-206</p>
+<div STYLE="page-break-after: always;"></div>
 <h2 id="introduction">Introduction</h2>
-<p>In this lab, we are going to learn the object-relational mapper (ORM) provided by SQLAlchemy.</p>
-<p>With ORM, we can map a class to a database table, and map an object of that class to a row in</p>
-<p>the database table. With SQLAlchemy’s ORM, we can avoid directly using any raw SQL statements.</p>
-<p>More important,we will be able to follow the principle of dependency inversion – let ORM depend</p>
-<p>on the domain model,but not the other way around.</p>
+<p>In this lab, we are going to learn the object-relational mapper (ORM) provided by SQLAlchemy. With ORM, we can map a class to a database table, and map an object of that class to a row in the database table. With SQLAlchemy’s ORM, we can avoid directly using any raw SQL statements. More important, we will be able to follow the principle of dependency inversion – let ORM depend on the domain model, but not the other way around.</p>
 <p>We will create 3 files:</p>
 <blockquote>
 <ul>
@@ -437,8 +469,7 @@
 <li>app.py</li>
 </ul>
 </blockquote>
-<p>Here app.py imports the above two python modules and generates an SQLite database exactly</p>
-<p>like EnglishPalDatabase.db</p>
+<p>Here app.py imports the above two python modules and generates an SQLite database exactly like EnglishPalDatabase.db.</p>
 <h2 id="materials-and-methods">Materials and Methods</h2>
 <h3 id="work-flow">Work Flow</h3>
 <blockquote>
@@ -452,68 +483,63 @@
 </ol>
 </blockquote>
 <h3 id="source-codes">Source Codes</h3>
-<p>For this part, We implemented the incomplete function, class and used property to achieve the</p>
-<p>requirements. See the source codes and comments for detail.</p>
+<p>For this part, We implemented the incomplete function, class and used property to achieve the requirements. See the source codes and comments for detail.</p>
+<div STYLE="page-break-after: always;"></div>
+
 <ol>
 <li>orm.py</li>
 </ol>
-<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># Software Architecture and Design Patterns -- Lab 2 starter code</span>
-<span class="c1"># Copyright (C) 2021 Hui Lan</span>
-
-<span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">Table</span><span class="p">,</span> <span class="n">MetaData</span><span class="p">,</span> <span class="n">Column</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">String</span><span class="p">,</span> <span class="n">Date</span><span class="p">,</span> <span class="n">ForeignKey</span>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">Table</span><span class="p">,</span> <span class="n">MetaData</span><span class="p">,</span> <span class="n">Column</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">String</span><span class="p">,</span> <span class="n">Date</span><span class="p">,</span> <span class="n">ForeignKey</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="kn">import</span> <span class="n">mapper</span><span class="p">,</span> <span class="n">relationship</span>
 
 <span class="kn">import</span> <span class="nn">model</span>
@@ -521,118 +547,111 @@
 <span class="n">metadata</span> <span class="o">=</span> <span class="n">MetaData</span><span class="p">()</span>
 
 <span class="n">articles</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span>
-    <span class="s1">&#39;articles&#39;</span><span class="p">,</span>
-    <span class="n">metadata</span><span class="p">,</span>
-    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;article_id&#39;</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">autoincrement</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
-    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;text&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">10000</span><span class="p">)),</span>
-    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;source&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">100</span><span class="p">)),</span>
-    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">10</span><span class="p">)),</span>
-    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;level&#39;</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
-    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;question&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">1000</span><span class="p">)),</span>
+    <span class="s1">&#39;articles&#39;</span><span class="p">,</span> 
+    <span class="n">metadata</span><span class="p">,</span> 
+    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;article_id&#39;</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">autoincrement</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> 
+    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;text&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">10000</span><span class="p">)),</span> 
+    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;source&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">100</span><span class="p">)),</span> 
+    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">10</span><span class="p">)),</span> 
+    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;level&#39;</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span> 
+    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;question&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">1000</span><span class="p">)),</span> 
 <span class="p">)</span>
 
 <span class="n">users</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span>
-    <span class="s1">&#39;users&#39;</span><span class="p">,</span>
-    <span class="n">metadata</span><span class="p">,</span>
-    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
-    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;password&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">64</span><span class="p">)),</span>
-    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;start_date&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
-    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;expiry_date&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
+    <span class="s1">&#39;users&#39;</span><span class="p">,</span> 
+    <span class="n">metadata</span><span class="p">,</span> 
+    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> 
+    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;password&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">64</span><span class="p">)),</span> 
+    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;start_date&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span> 
+    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;expiry_date&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span> 
 <span class="p">)</span>
 
 <span class="n">newwords</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span>
-    <span class="s1">&#39;newwords&#39;</span><span class="p">,</span>
-    <span class="n">metadata</span><span class="p">,</span>
-    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;word_id&#39;</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">autoincrement</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
-    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s1">&#39;users.username&#39;</span><span class="p">)),</span>
-    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;word&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">20</span><span class="p">)),</span>
-    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">10</span><span class="p">)),</span>
+    <span class="s1">&#39;newwords&#39;</span><span class="p">,</span> 
+    <span class="n">metadata</span><span class="p">,</span> 
+    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;word_id&#39;</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">autoincrement</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> 
+    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s1">&#39;users.username&#39;</span><span class="p">)),</span> 
+    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;word&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">20</span><span class="p">)),</span> 
+    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">10</span><span class="p">)),</span> 
 <span class="p">)</span>
 
 <span class="hll"><span class="c1"># ADDITION: add the reading part</span>
 </span><span class="hll"><span class="n">readings</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span>
-</span><span class="hll">    <span class="s1">&#39;readings&#39;</span><span class="p">,</span>
-</span><span class="hll">    <span class="n">metadata</span><span class="p">,</span>
-</span><span class="hll">    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">autoincrement</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
-</span><span class="hll">    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s1">&#39;users.username&#39;</span><span class="p">)),</span>
-</span><span class="hll">    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;article_id&#39;</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s1">&#39;articles.article_id&#39;</span><span class="p">)),</span>
+</span><span class="hll">    <span class="s1">&#39;readings&#39;</span><span class="p">,</span> 
+</span><span class="hll">    <span class="n">metadata</span><span class="p">,</span> 
+</span><span class="hll">    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">autoincrement</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> 
+</span><span class="hll">    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s1">&#39;users.username&#39;</span><span class="p">)),</span> 
+</span><span class="hll">    <span class="n">Column</span><span class="p">(</span><span class="s1">&#39;article_id&#39;</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s1">&#39;articles.article_id&#39;</span><span class="p">)),</span> 
 </span><span class="hll"><span class="p">)</span>
 </span><span class="k">def</span> <span class="nf">start_mappers</span><span class="p">():</span>
 <span class="hll">    <span class="c1"># ADDITION: implement the start_mapper()</span>
 </span><span class="hll">    <span class="n">lines_mapper</span> <span class="o">=</span> <span class="n">mapper</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">User</span><span class="p">,</span> <span class="n">users</span><span class="p">)</span>
 </span><span class="hll">    <span class="n">lines_mapper</span> <span class="o">=</span> <span class="n">mapper</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">NewWord</span><span class="p">,</span> <span class="n">newwords</span><span class="p">)</span>
 </span><span class="hll">    <span class="n">lines_mapper</span> <span class="o">=</span> <span class="n">mapper</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">Article</span><span class="p">,</span> <span class="n">articles</span><span class="p">)</span>
-</span><span class="hll">    <span class="n">lines_mapper</span> <span class="o">=</span> <span class="n">mapper</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">Reading</span><span class="p">,</span><span class="n">readings</span><span class="p">)</span>
+</span><span class="hll">    <span class="n">lines_mapper</span> <span class="o">=</span> <span class="n">mapper</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">Reading</span><span class="p">,</span> <span class="n">readings</span><span class="p">)</span>
 </span><span class="hll">    <span class="c1"># pass</span>
 </span></code></pre></div>
 </td></tr></table>
-<img alt="" src="" />
-2. model.py</p>
-<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># Software Architecture and Design Patterns -- Lab 2 starter code</span>
-<span class="c1"># Copyright (C) 2021 Hui Lan</span>
-
-<span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span>
+2.    model.py</p>
+<p><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span>
 <span class="hll"><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span>
 </span><span class="hll"><span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="kn">import</span> <span class="n">sessionmaker</span>
 </span>
@@ -693,87 +712,80 @@
 </span><span class="hll">        <span class="bp">self</span><span class="o">.</span><span class="n">article_id</span> <span class="o">=</span> <span class="n">article_id</span>
 </span></code></pre></div>
 </td></tr></table>
-<img alt="" src="" />
-3. app.py</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72
-73
-74
-75
-76</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># Software Architecture and Design Patterns -- Lab 2 starter code</span>
-<span class="c1"># Copyright (C) 2021 Hui Lan</span>
-
-<span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span>
+3.    app.py</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="kn">import</span> <span class="n">sessionmaker</span>
 
 <span class="kn">import</span> <span class="nn">model</span>
@@ -818,9 +830,9 @@
 <span class="c1"># add a few articles</span>
 
 <span class="n">session</span> <span class="o">=</span> <span class="n">get_session</span><span class="p">()</span>
-<span class="n">article</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">Article</span><span class="p">(</span><span class="n">article_id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-                        <span class="n">text</span><span class="o">=</span><span class="s1">&#39;THE ORIGIN OF SPECIES BY MEANS OF NATURAL SELECTION, OR THE PRESERVATION OF FAVOURED RACES IN THE STRUGGLE FOR LIFE&#39;</span><span class="p">,</span>
-                        <span class="n">source</span><span class="o">=</span><span class="s1">&#39;CHARLES DARWIN, M.A.&#39;</span><span class="p">,</span> <span class="n">date</span><span class="o">=</span><span class="s1">&#39;1859-01-01&#39;</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+<span class="n">article</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">Article</span><span class="p">(</span><span class="n">article_id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> 
+                        <span class="n">text</span><span class="o">=</span><span class="s1">&#39;THE ORIGIN OF SPECIES BY MEANS OF NATURAL SELECTION, OR THE PRESERVATION OF FAVOURED RACES IN THE STRUGGLE FOR LIFE&#39;</span><span class="p">,</span> 
+                        <span class="n">source</span><span class="o">=</span><span class="s1">&#39;CHARLES DARWIN, M.A.&#39;</span><span class="p">,</span> <span class="n">date</span><span class="o">=</span><span class="s1">&#39;1859-01-01&#39;</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> 
                         <span class="n">question</span><span class="o">=</span><span class="s1">&#39;Are humans descended from monkeys?&#39;</span><span class="p">)</span>
 <span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">article</span><span class="p">)</span>
 <span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
@@ -851,35 +863,33 @@
 <h2 id="results">Results</h2>
 <p>For this part we make <strong>screenshots</strong> to illustrate the results.</p>
 <ol>
-<li>
-<p>After running <strong>app.py</strong>:<img alt="./imgs/apppy_res.png" src="https://github.com/Wangyc2000/SADP_Lab2_Report/raw/master/source/imgs/apppy_res.png" /></p>
-</li>
+<li>After running <strong>app.py</strong>:<img alt="./imgs/apppy_res.png" src="https://github.com/Wangyc2000/SADP_Lab2_Report/raw/master/source/imgs/apppy_res.png" /></li>
 <li>
 <p>Inside <strong>EnglishPalDatabase.db(Open with Navicat Premium)</strong>: </p>
+<ol>
+<li>
+<p>list of tables: </p>
+<p><img alt="imgs/db_tables.png" src="https://github.com/Wangyc2000/SADP_Lab2_Report/raw/master/source/imgs/db_tables.png" /></p>
+</li>
+<li>
+<p>articles: 
+   <img alt="./imgs/db_articles.png" src="https://github.com/Wangyc2000/SADP_Lab2_Report/raw/master/source/imgs/db_articles.png" /></p>
+</li>
+<li>
+<p>newwords: 
+   <img alt="./imgs/db_newwords.png" src="https://github.com/Wangyc2000/SADP_Lab2_Report/raw/master/source/imgs/db_newwords.png" /></p>
+</li>
+<li>
+<p>readings: 
+   <img alt="./imgs/db_readings.png" src="https://github.com/Wangyc2000/SADP_Lab2_Report/raw/master/source/imgs/db_readings.png" /></p>
+</li>
+<li>
+<p>users: 
+   <img alt="./imgs/db_users.png" src="https://github.com/Wangyc2000/SADP_Lab2_Report/raw/master/source/imgs/db_users.png" /></p>
 </li>
 </ol>
-<blockquote>
-<ul>
-<li>list of tables: </li>
-</ul>
-<p><img alt="imgs/db_tables.png" src="https://github.com/Wangyc2000/SADP_Lab2_Report/raw/master/source/imgs/db_tables.png" /></p>
-<ul>
-<li>articles: </li>
-</ul>
-<p><img alt="./imgs/db_articles.png" src="https://github.com/Wangyc2000/SADP_Lab2_Report/raw/master/source/imgs/db_articles.png" /></p>
-<ul>
-<li>newwords: </li>
-</ul>
-<p><img alt="./imgs/db_newwords.png" src="https://github.com/Wangyc2000/SADP_Lab2_Report/raw/master/source/imgs/db_newwords.png" /></p>
-<ul>
-<li>readings: </li>
-</ul>
-<p><img alt="./imgs/db_readings.png" src="https://github.com/Wangyc2000/SADP_Lab2_Report/raw/master/source/imgs/db_readings.png" /></p>
-<ul>
-<li>users: </li>
-</ul>
-<p><img alt="./imgs/db_users.png" src="https://github.com/Wangyc2000/SADP_Lab2_Report/raw/master/source/imgs/db_users.png" /></p>
-</blockquote>
+</li>
+</ol>
 <h2 id="discussions">Discussions</h2>
 <ul>
 <li>For this lab we learnt about the way to manipulate database with SQLAlchemy’s ORM (object-relational mapper) instead of raw SQL statement in web application, which will bring convenience while making the architecture more clear.</li>
@@ -921,6 +931,20 @@
         </a>
       
       
+        <a href="../lab3/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Lab3
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
     </nav>
   
   <div class="md-footer-meta md-typeset">
@@ -949,7 +973,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.d351de03.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.a1609d9a.min.js"></script>
+      <script src="../assets/javascripts/bundle.34eae1b6.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
       
