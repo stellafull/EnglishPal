@@ -10,7 +10,7 @@ Instructor: [Lanhui](http://lanlab.org/Biography.html)
 
 * [Lab1 - Dependency Analysis and Dependency Graph](/EnglishPal/lab1/)
 * [Lab2 - The ORM Magic](/EnglishPal/lab2/)
-* [Lab 3 - The Service Layer](/EnglishPal/lab3/)
+* [Lab3 - The Service Layer](/EnglishPal/lab3/)
 
 ## Project layout
 
